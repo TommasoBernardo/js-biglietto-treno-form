@@ -56,7 +56,7 @@ if ( inputAgeElement < 18 ){
     console.log(priceDiscount);
     document.getElementById("output").innerHTML = priceDiscount.toFixed(2) + '&euro;';
 } else{
-    document.getElementById("output").innerHTML = ticket.toFixed(2) + ' &euro; '
+    document.getElementById("output").innerHTML = ticket.toFixed(2) + ' &euro; ';
 }
 
 });
