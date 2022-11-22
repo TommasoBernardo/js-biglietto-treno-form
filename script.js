@@ -21,14 +21,45 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 
 
 //Dichiaro quanti anni ho
-let age = parseInt ( document.querySelector('input#età'));  
+const inputAgeElement = document.querySelector ('input#age');  
 //dichiaro quanti kilometri voglio percorrere
-let kilometers = parseInt ( document.querySelector('input#kilometri'));
+const inputKilometersElement =  document.querySelector ('input#kilometers');
+
+let button = document.querySelector('div.buttons a.btn');
+
+let ticket;
+let priceKm = 0.2762    ;
+
+
+
+let discountMinors = 20 * ticket / 100;
+let discountOver = 40 * ticket /100; 
+
+
+let priceDiscount;
 
 button.addEventListener('click', function(){
-    console.log(age.value);
-    console.log(kilometers.value);
-})
+
+console.log(inputAgeElement.value);
+console.log(inputKilometersElement.value);
+
+ticket = inputKilometersElement * priceKm ;
+console.log(ticket);
+
+if ( inputAgeElement < 18 ){
+    priceDiscount = ticket - discountMinors;
+    console.log(priceDiscount);
+    document.getElementById("output").innerHTML = priceDiscount.toFixed(2) + '&euro;';
+
+}else if ( inputAgeElement > 65 ){
+    priceDiscount = ticket - discountOver;
+    console.log(priceDiscount);
+    document.getElementById("output").innerHTML = priceDiscount.toFixed(2) + '&euro;';
+} else{
+    document.getElementById("output").innerHTML = ticket.toFixed(2) + ' &euro; '
+}
+
+});
 
 
 
