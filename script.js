@@ -23,7 +23,7 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 
 
 
-const button = document.querySelector('div.button a.btn.btn-lg.btn-primary');
+const button = document.querySelector('div.buttons a.btn.btn-lg.btn-primary');
 console.log(button);
 
 button.addEventListener("click" , function(){
@@ -41,7 +41,7 @@ button.addEventListener("click" , function(){
         price = price * 0.6;
     }
 
-    document.getElementById('output').innerHTML = " il costo del biglietto è: ${price} &euro; ";
+    document.getElementById('output').innerHTML = "il costo del biglietto è:" + ${price} "&euro;" ;
 });
 
 
