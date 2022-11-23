@@ -41,7 +41,7 @@ button.addEventListener("click" , function(){
         price = price * 0.6;
     }
 
-    document.getElementById('output').innerHTML = "il costo del biglietto è:" + ${price} "&euro;" ;
+    document.getElementById('output').innerHTML = `il costo del biglietto è: ${price.toFixed(2)} &euro;` ;
 });
 
 
